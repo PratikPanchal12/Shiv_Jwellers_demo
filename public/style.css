@@ -1,0 +1,356 @@
+body {
+  overflow-x: hidden;
+  padding: 1px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+/* ======================logo=================== */
+
+.logo {
+  width: 10em;
+  padding-top: 1em;
+}
+
+.logotext {
+  margin-left: 6.5em;
+  margin-top: -2.5em;
+  margin-bottom: 3em;
+  font-size: 2em !important;
+  color: brown;
+}
+
+.adddata {
+  float: right;
+  margin-top: -8em !important;
+}
+
+/* =================================== */
+
+.allBox {
+  margin-top: 5em;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-column-gap: 1em;
+}
+
+.first,
+.second {
+  display: grid;
+  height: 100%;
+  grid-row-gap: 1em;
+  /* border-radius: 50% !important; */
+}
+
+.item1,
+.item2 {
+  height: 41em !important;
+  border: 2px solid rgba(165, 42, 42, 0.2);
+  border-radius: 2%;
+  position: relative;
+  background-color: rgba(130, 221, 208, 0.2);
+  box-shadow: gray 2px 4px 5px 2px;
+  margin-left: 2em;
+  /* overflow-y: scroll;
+  overflow-x: hidden;
+  scroll-behavior: smooth; */
+  /* background-color: lightblue; */
+}
+
+.item3,
+.item4,
+.item5,
+.item6 {
+  border: 2px solid rgba(165, 42, 42, 0.2);
+  height: 20em;
+  position: relative;
+  border-radius: 2%;
+  background-color: rgba(130, 221, 208, 0.2);
+  box-shadow: gray 2px 4px 5px 2px;
+  margin-right: 2em;
+
+  /* overflow-y: scroll; */
+  /* scroll-behavior: smooth;
+  overflow-x: hidden; */
+  /* background-color: lightblue; */
+}
+
+.mainDiv {
+  display: flex;
+  padding: 5%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  /* height: 100px; */
+  max-height: inherit;
+  /* scroll-behavior: smooth; */
+  /* overflow-y: scroll; */
+}
+
+.mainTitle {
+  text-align: center;
+  font-size: 1.5em;
+  text-decoration: underline;
+}
+
+.debitDiv {
+  flex: 1;
+  /* border: 1px solid red; */
+}
+
+.debitTitle,
+.creditTitle {
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.creditDiv {
+  flex: 1;
+  /* border: 1px solid red; */
+  text-align: right;
+}
+
+.debitMainDetails {
+  padding-top: 3%;
+  display: inline-flex;
+  width: 100%;
+}
+
+.debitTransactionName {
+  margin-left: 3%;
+}
+
+.extraDetailsDebitDiv {
+  /* padding-left: 27%; */
+  font-size: 1.1em;
+  text-align: center;
+}
+
+.debitAmount,
+.creditAmount {
+  /* margin-top: 10%; */
+  font-size: 1.3em;
+  text-align: center;
+}
+
+.creditMainDetails {
+  display: inline-flex;
+  padding-top: 3%;
+  width: 100%;
+  /* position: absolute; */
+  /* text-align: right; */
+}
+
+/* .creditAmount,
+.creditTransactionName {
+} */
+
+.creditTransactionName {
+  /* text-align: right; */
+  margin-left: 3%;
+}
+
+.extraDetailsCreditDiv {
+  font-size: 1.1em;
+  /* padding-right: 16%; */
+  text-align: center;
+}
+
+/*--------------------Ribbon---------------------*/
+.ribbon1 {
+  position: absolute;
+  top: -6.1px;
+  right: 10px;
+}
+
+.ribbon1:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 53px solid transparent;
+  border-right: 53px solid transparent;
+  border-top: 10px solid #f8463f;
+}
+
+.ribbon1 span {
+  position: relative;
+  display: block;
+  text-align: center;
+  background: #f8463f;
+  font-size: 14px;
+  line-height: 1;
+  padding: 12px 8px 10px;
+  border-top-right-radius: 8px;
+  width: 90px;
+}
+
+.ribbon1 span:before {
+  height: 6px;
+  width: 6px;
+  left: -6px;
+  top: 0;
+  background: #f8463f;
+}
+.ribbon1 span:before,
+.ribbon1 span:after {
+  position: absolute;
+  content: "";
+}
+.ribbon1 span:after {
+  height: 6px;
+  width: 8px;
+  left: -8px;
+  top: 0;
+  border-radius: 8px 8px 0 0;
+  background: #c02031;
+}
+.ribbon1 span:before,
+.ribbon1 span:after {
+  position: absolute;
+  content: "";
+}
+
+/*------*/
+
+.ribbon3 {
+  width: 150px;
+  height: 50px;
+  line-height: 50px;
+  padding-left: 15px;
+  position: absolute;
+  left: -8px;
+  top: 20px;
+  background: #59324c;
+}
+
+.ribbon3:before {
+  height: 0;
+  width: 0;
+  top: -8.5px;
+  left: 0.1px;
+  border-bottom: 9px solid black;
+  border-left: 9px solid transparent;
+}
+.ribbon3:before,
+.ribbon3:after {
+  content: "";
+  position: absolute;
+}
+.ribbon3:after {
+  height: 0;
+  width: 0;
+  right: -14.5px;
+  border-top: 25px solid transparent;
+  border-bottom: 25px solid transparent;
+  border-left: 15px solid #59324c;
+}
+.ribbon3:before,
+.ribbon3:after {
+  content: "";
+  position: absolute;
+}
+
+/* ---------------- */
+
+.ribbon4 {
+  position: absolute;
+  top: 15px;
+  padding: 8px 10px;
+  background: #00b3ed;
+  box-shadow: -1px 2px 3px rgba(0, 0, 0, 0.3);
+}
+
+.ribbon4:before {
+  width: 7px;
+  height: 100%;
+  top: 0;
+  left: -6.5px;
+  padding: 0 0 7px;
+  background: inherit;
+  border-radius: 5px 0 0 5px;
+}
+.ribbon4:before,
+.ribbon4:after {
+  content: "";
+  position: absolute;
+}
+.ribbon4:after {
+  width: 5px;
+  height: 5px;
+  bottom: -5px;
+  left: -4.5px;
+  background: lightblue;
+  border-radius: 5px 0 0 5px;
+}
+.ribbon4:before,
+.ribbon4:after {
+  content: "";
+  position: absolute;
+}
+
+/* ----------- */
+
+.ribbon5 {
+  position: absolute;
+  top: 15px;
+  left: 95%;
+  padding: 8px 10px;
+  background: #00b3ed;
+  box-shadow: -1px 2px 3px rgba(0, 0, 0, 0.3);
+}
+
+.ribbon5:before {
+  width: 7px;
+  height: 100%;
+  top: 0;
+  left: 38.5px;
+  padding: 0 0 7px;
+  background: inherit;
+  border-radius: 0px 5px 5px 0px;
+}
+.ribbon5:after,
+.ribbon5:before {
+  content: "";
+  position: absolute;
+}
+.ribbon5:after {
+  width: 5px;
+  height: 5px;
+  bottom: -4px;
+  left: 39px;
+  background: lightblue;
+  border-radius: 5px 0 0 5px;
+}
+.ribbon5:after,
+.ribbon5:before {
+  content: "";
+  position: absolute;
+}
+
+/* =====================Form=================== */
+
+#cashForm {
+  display: none;
+}
+
+.otherdata {
+  float: right;
+  margin-top: -8em !important;
+  margin-right: 5em !important;
+}
+
+.saledata {
+  float: right;
+  margin-top: -8em !important;
+  margin-right: 10em !important;
+}
+
+.home {
+  float: right;
+  margin-top: -8em !important;
+  margin-right: 20em !important;
+}

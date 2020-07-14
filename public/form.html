@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shiv Jewellers</title>
+
+    <!-- bootstrap css -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <nav>
+      <img class="logo ml-5" src="O1.png" />
+      <h4 class="logotext">Shiv Jewellers</h4>
+      <a class="home btn btn-outline-primary mr-5 my-sm-0" href="index.html">
+        Home Page
+      </a>
+      <button
+        type="button"
+        id="otherBtn"
+        class="otherdata btn btn-outline-primary mr-5 my-sm-0"
+      >
+        Other
+      </button>
+      <button
+        type="button"
+        id="saleBtn"
+        class="saledata btn btn-outline-primary mr-5 my-sm-0"
+      >
+        Sale/Purchase
+      </button>
+    </nav>
+    <div class="container">
+      <form id="cashForm" class="mt-5">
+        <h4 class="text-center">Cash Details</h4>
+        <div class="form-group mt-5 row">
+          <label for="transactionName" class="col-sm-2 col-form-label"
+            >Name:</label
+          >
+          <div class="col-sm-10">
+            <input
+              type="text"
+              class="form-control"
+              id="transactionName"
+              placeholder="Name"
+            />
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="transactionReason" class="col-sm-2 col-form-label"
+            >Reason:</label
+          >
+          <div class="col-sm-10">
+            <input
+              type="text"
+              class="form-control"
+              id="transactionReason"
+              placeholder="Reason"
+            />
+          </div>
+        </div>
+        <label class="col-form-label mr-3 mb-3">Transaction Type:</label>
+        <div class="form-check ml-5 form-check-inline">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="transactionType"
+            id="debit"
+            value="Debit"
+          />
+          <label class="form-check-label" for="transactionType">Debit</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="transactionType"
+            id="credit"
+            value="Credit"
+          />
+          <label class="form-check-label" for="transactionType">Credit</label>
+        </div>
+        <div class="form-group row">
+          <label for="amount" class="col-sm-2 col-form-label">Amount:</label>
+          <div class="col-sm-10">
+            <input
+              type="number"
+              class="form-control"
+              id="amount"
+              placeholder="Amount"
+            />
+          </div>
+        </div>
+        <div class="form-group row text-center">
+          <div class="col-sm-12">
+            <button type="button" id="AddCashForm" class="btn btn-primary">
+              Add Details
+            </button>
+          </div>
+        </div>
+      </form>
+
+      <form id="saleForm" class="mt-5 mb-5">
+        <h4 class="text-center">Sale/Purchase Details</h4>
+        <div class="row">
+          <div class="col-6">
+            <label class="col-form-label mr-5 mt-4 mb-3">Metal Type:</label>
+            <div class="form-check ml-5 form-check-inline">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="metalType"
+                id="inlineGold"
+                value="Gold"
+              />
+              <label class="form-check-label" for="metalType">Gold</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="metalType"
+                id="inlineSilver"
+                value="Silver"
+              />
+              <label class="form-check-label" for="metalType">Silver</label>
+            </div>
+          </div>
+          <div class="col-6">
+            <label class="col-form-label mr-5 mt-4 mb-3">Bhangar:</label>
+            <div class="form-check ml-5 pl-4 form-check-inline">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="bhangarType"
+                id="inlineYes"
+                value="true"
+              />
+              <label for="bhangarType" class="form-check-label">Yes</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="bhangarType"
+                id="inlineNo"
+                value="false"
+              />
+              <label class="form-check-label" for="bhangarType">No</label>
+            </div>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="itemName" class="col-sm-2 col-form-label"
+            >Item Name:</label
+          >
+          <div class="col-sm-10">
+            <input
+              type="text"
+              class="form-control"
+              id="itemName"
+              placeholder="Name"
+            />
+          </div>
+        </div>
+        <label class="col-form-label mr-3 mb-3">Transaction Type:</label>
+        <div class="form-check ml-5 form-check-inline">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="transactionType"
+            id="inlineSale"
+            value="Sale"
+          />
+          <label class="form-check-label" for="transactionType">Sale</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="transactionType"
+            id="inlinePurchase"
+            value="Purchase"
+          />
+          <label class="form-check-label" for="transactionType">Purchase</label>
+        </div>
+        <div class="form-group row">
+          <label for="quntity" class="col-sm-2 col-form-label">Quntity:</label>
+          <div class="col-sm-10">
+            <input
+              type="number"
+              min="0"
+              class="form-control"
+              id="quntity"
+              placeholder="Quntity"
+            />
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="grossWeight" class="col-sm-2 col-form-label"
+            >GrossWeight:</label
+          >
+          <div class="col-sm-10">
+            <input
+              type="number"
+              min="0"
+              class="form-control"
+              id="grossWeight"
+              placeholder="GrossWeight"
+            />
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="netWeight" class="col-sm-2 col-form-label"
+            >NetWeight:</label
+          >
+          <div class="col-sm-10">
+            <input
+              type="number"
+              min="0"
+              class="form-control"
+              id="netWeight"
+              placeholder="NetWeight"
+            />
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="touch" class="col-sm-2 col-form-label">Touch:</label>
+          <div class="col-sm-10">
+            <input
+              type="number"
+              min="0"
+              class="form-control"
+              id="touch"
+              placeholder="Touch"
+            />
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="west" class="col-sm-2 col-form-label">West:</label>
+          <div class="col-sm-10">
+            <input
+              type="number"
+              min="0"
+              class="form-control"
+              id="west"
+              placeholder="West"
+            />
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="labour" class="col-sm-2 col-form-label">Labour:</label>
+          <div class="col-sm-10">
+            <input
+              type="number"
+              min="0"
+              class="form-control"
+              id="labour"
+              placeholder="Labour"
+            />
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="currentPrice" class="col-sm-2 col-form-label"
+            >Current Price:</label
+          >
+          <div class="col-sm-10">
+            <input
+              type="number"
+              min="0"
+              class="form-control"
+              id="currentPrice"
+              placeholder="CurrentPrice"
+            />
+          </div>
+        </div>
+
+        <div class="form-group row text-center">
+          <div class="col-sm-12">
+            <button type="button" id="AddSaleForm" class="btn btn-primary">
+              Add Details
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <script src="./js/addData.js"></script>
+
+    <!-- Bootstrap js cdn -->
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+    <!-- Axios -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"
+      integrity="sha512-VZ6m0F78+yo3sbu48gElK4irv2dzPoep8oo9LEjxviigcnnnNvnTOJRSrIhuFk68FMLOpiNz+T77nNY89rnWDg=="
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
